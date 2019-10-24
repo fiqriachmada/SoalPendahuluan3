@@ -72,11 +72,11 @@ public class main {
         System.out.println("Tambah Data Pelangga!");
         pelanggan pelanggan = new pelanggan();
 
-        System.out.println("ID Pelanggan       : " + String.valueOf(pelangganArr.size() + 1));
+        System.out.print("ID Pelanggan       : " + String.valueOf(pelangganArr.size() + 1));
         pelanggan.setId(pegawaiArr.size() + 1);
-        System.out.println("Nama Pelanggan     : ");
+        System.out.print("Nama Pelanggan     : ");
         pelanggan.setNama(scan.next());
-        System.out.println("Nomer HP Pelanggan : ");
+        System.out.print("Nomer HP Pelanggan : ");
         pelanggan.setNoHp(scan.next());
 
         pelangganArr.add(pelanggan);
@@ -86,7 +86,14 @@ public class main {
         System.out.println("Tambah Data Cucian!");
         cucian cucian = new cucian();
 
-        System.out.println("ID Pegawai         : ");
+        System.out.print("ID Pegawai         : ");
         cucian.setPegawai(pegawaiArr.get(scan.nextInt() - 1));
+        System.out.print("ID Pelanggan       : ");
+        cucian.setPelanggan(pelangganArr.get(scan.nextInt() - 1));
+        System.out.print("Berat Cucian (KG)  : ");
+        cucian.setBerat(scan.nextFloat());
+        System.out.print("Harga Totalnya     : " + cucian.getHargaTotal());
+        cucianArr.add(cucian);
+
     }
 }
